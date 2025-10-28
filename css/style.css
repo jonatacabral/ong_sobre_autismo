@@ -1,0 +1,51 @@
+ * {
+    margin: 0;
+    padding: 0;
+ }
+
+ header {
+            background-image: url('/imagens/template.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            padding: 2rem;
+            text-align: center;
+            height: 80px;
+            margin: 0;
+        }
+
+
+ body {
+   
+    font-family: "Cabin", sans-serif;
+ }
+
+
+ main {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+ }
+ 
+ section {
+    display: flex;
+    flex-direction: column;
+    gap: 1.0rem;
+ }
+
+ img {
+    width: 15rem;
+    border-radius: 5px;
+ }
+ fieldeset {
+    border: 2px;
+    padding: 1rem;
+ }
+
+ footer {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+ }

@@ -1,0 +1,67 @@
+ * {
+    margin: 0;
+    padding: 0;
+ }
+
+ body {
+   
+    font-family: "Cabin", sans-serif;
+ }
+
+ header {
+            background-image: url('/imagens/template.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 80px;
+            margin: 0;
+            padding: 2rem;
+            text-align: center;
+        }
+    
+ 
+
+ main {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+ }
+ 
+ section {
+    display: flex;
+    flex-direction: column;
+    gap: 1.0rem;
+ }
+
+ img {
+    width: 15rem;
+    border-radius: 5px;
+ }
+
+ details {
+    background-color: chartreuse;
+    padding: 1rem;
+
+ }
+ 
+ summary {
+    color: brown;
+    margin: 0.5rem;
+    cursor:pointer;
+ }
+
+ ul {
+    margin-left:1.5rem;
+
+ }
+
+ li {
+    padding: 0.2rem;
+ }
+ footer {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+ }
