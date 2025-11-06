@@ -1,17 +1,26 @@
-  <!DOCTYPE html>
- 
-<html lang="pt">
+<!DOCTYPE html>
+<html lang="pt-br">
 <head>
-    <title>Ong autismo</title>
     <meta charset="UTF-8">
     <meta name="description" content="Ong sobre autista">
-   
+    <title>Diagnóstico - Ong Autismo</title>
+    <link rel="stylesheet" href="/css/stylegeral.css">
+    <link rel="stylesheet" href="/css/stylepg2.css">
 </head>
-
 <body>
     <header>
-        <h1>Diagnostico</h1>
-         
+        <div class="menu-hamburguer">
+            <input type="checkbox" id="menu-toggle" />
+            <label for="menu-toggle" class="menu-icon"><span></span><span></span><span></span></label>
+            <nav class="menu">
+                <ul>
+                    <li><a href="/html/index.html">Home</a></li>
+                    <li><a href="/html/pagina2.html">Sobre</a></li>
+                    <li><a href="/html/cadastro.html">Cadastro</a></li>
+                </ul>
+            </nav>
+        </div>
+        <h1>Diagnóstico</h1>
     </header>
     <main>
         <section><p>Os primeiros sinais do Transtorno do Espectro Autista são visíveis em bebês, entre 1 e 2 anos de vida, embora possam ser detectados antes ou depois disso, caso os atrasos de desenvolvimento sejam mais sérios ou mais sutis, respectivamente. A partir dos 12 meses, as crianças autistas não apontam com o dedinho, demonstram mais interesse nos objetos do que nas pessoas, não mantêm contato visual efetivo e não olham quando chamadas. É importante destacar os raros casos de regressão do desenvolvimento, identificados comumente após ao menos 2 anos de desenvolvimento típico (denominado anteriormente como transtorno desintegrativo da infância).</p>
@@ -34,60 +43,38 @@
 
 <p>Outro elemento essencial no tratamento é o treinamento com os pais. O contexto familiar é fundamental no aprendizado de habilidades sociais e o trabalho com os pais traz grandes benefícios no reforço de comportamentos adequados. Também é comum que os profissionais que tratam a criança indiquem acompanhamento psicológico para a família, devido ao desgaste emocional que o distúrbio pode provocar.</p><br>
         </section>
-        
-        
-        <section> 
-            
-            
-            <h3>Qual dessas respostas estão corretas?</h3><br>
-            <form>
-                <input type="checkbox" id="pergunta1" name="conhecimentos" value="Autismo é uma doença">
-                <label for="pergunta1">Autismo é uma doença</label>
-                
-                <input type="checkbox" id="pergunta2" name="conhecimentos" value="Autismo é um transtorno">
-                <label for="pergunta2">Autismo é um transtorno</label>
+        <section>
+            <h3>Qual dessas respostas estão corretas?</h3>
+            <form id="quizForm">
+                <input type="checkbox" id="pergunta1" value="Autismo é uma doença">
+                <label for="pergunta1">Autismo é uma doença</label><br>
 
-                <input type="checkbox" id="pergunta3" name="conhecimentos" value="Nem todo autista é agitado">
-                <label for="pergunta3">Nem todo autista é agitado</label>
+                <input type="checkbox" id="pergunta2" value="Autismo é um transtorno">
+                <label for="pergunta2">Autismo é um transtorno</label><br>
 
-                <input type="checkbox" id="pergunta4" name="conhecimentos" value="Nem todo autista tem prioridade em filas de espera">
+                <input type="checkbox" id="pergunta3" value="Nem todo autista é agitado">
+                <label for="pergunta3">Nem todo autista é agitado</label><br>
+
+                <input type="checkbox" id="pergunta4" value="Nem todo autista tem prioridade em filas de espera">
                 <label for="pergunta4">Nem todo autista tem prioridade em filas de espera</label>
-
             </form>
-            
         </section>
         <section>
-            <h2>Verifique as respostar corretas</h2><br>
+            <h2>Verifique as respostas corretas</h2>
             <details>
-                <summary>Clica aqui para ver as respostas</summary><br>
-            <ul>
-                <li>Autismo é um transtorno</li>
-                <li>Nem todo autista é agitado</li>
-
-            </ul>
+                <summary>Clique aqui</summary>
+                <ul>
+                    <li>Autismo é um transtorno</li>
+                    <li>Nem todo autista é agitado</li>
+                </ul>
             </details>
         </section>
-        <section>
-         
-        </section>
-
     </main>
     <footer>
-        <p>Para voltar a pagina de inicio <a href="index.html" >Clique aqui</a></p><br>
-        <p>Fazer parte desse projeto <a href="cadastro.html" >Clique aqui</a></p><br>
-        <p> &copy; Autismo! Todos os direitos reservados</p>
-        
+        <p><a href="/html/index.html">Voltar à página inicial</a></p>
+        <p><a href="/html/cadastro.html">Fazer parte deste projeto</a></p>
+        <p>&copy; Autismo! Todos os direitos reservados</p>
     </footer>
+    <script src="/js/pagina2.js"></script>
 </body>
-
-
-
-
-
-
-
-
-
-
-
 </html>
