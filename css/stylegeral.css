@@ -228,3 +228,96 @@ footer {
 @media (max-width: 320px) {
     main { grid-template-columns: repeat(2, 1fr); }
 }
+
+/* =============================== */
+/* 🌙 MODO ESCURO E ALTO CONTRASTE */
+/* =============================== */
+
+/* Variáveis padrão (modo claro) */
+:root {
+  --cor-fundo: #ffffff;
+  --cor-texto: #222222;
+  --cor-primaria: #007acc;
+  --cor-secundaria: #4CAF50;
+  --cor-borda: #cccccc;
+  --cor-destaque: #e0f7fa;
+}
+
+/* Estilo base */
+body {
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Links e botões acessíveis */
+a, button {
+  color: var(--cor-secundaria);
+  font-weight: bold;
+}
+a:focus-visible, button:focus-visible {
+  outline: 3px solid var(--cor-primaria);
+  outline-offset: 3px;
+}
+
+/* =============================== */
+/* 🌑 MODO ESCURO AUTOMÁTICO */
+/* =============================== */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --cor-fundo: #121212;
+    --cor-texto: #f2f2f2;
+    --cor-primaria: #64b5f6;
+    --cor-secundaria: #81c784;
+    --cor-borda: #333333;
+    --cor-destaque: #1e1e1e;
+  }
+
+  body {
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+  }
+
+  header, footer, section {
+    background-color: var(--cor-destaque);
+    border-color: var(--cor-borda);
+  }
+
+  a, button {
+    color: var(--cor-secundaria);
+  }
+}
+
+/* =============================== */
+/* ⚡ VERSÃO ALTO CONTRASTE MANUAL */
+/* =============================== */
+
+/* Adicione a classe .alto-contraste ao <body> via JS ou botão */
+body.alto-contraste {
+  --cor-fundo: #000000;
+  --cor-texto: #ffffff;
+  --cor-primaria: #ffff00;
+  --cor-secundaria: #00ffff;
+  --cor-borda: #ffffff;
+}
+
+body.alto-contraste header,
+body.alto-contraste footer,
+body.alto-contraste section {
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto);
+  border: 2px solid var(--cor-borda);
+}
+
+body.alto-contraste a,
+body.alto-contraste button {
+  background-color: var(--cor-primaria);
+  color: #000;
+  border: none;
+}
+
+/* Foco visível em alto contraste */
+body.alto-contraste :focus-visible {
+  outline: 3px dashed var(--cor-secundaria);
+  outline-offset: 4px;
+}
