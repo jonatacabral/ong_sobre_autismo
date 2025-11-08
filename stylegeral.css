@@ -16,7 +16,7 @@ body {
 
 header {
    
-    background-image: url('/imagens/template.jpg'); /* mesma imagem em todas as páginas */
+    background-image: url('template.jpg'); /* mesma imagem em todas as páginas */
     color: var(--cor-preto);
     padding: var(--espacamento-medio);
     text-align: center;
@@ -321,3 +321,4 @@ body.alto-contraste :focus-visible {
   outline: 3px dashed var(--cor-secundaria);
   outline-offset: 4px;
 }
+
