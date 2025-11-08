@@ -20,6 +20,7 @@ header {
     color: var(--cor-preto);
     padding: var(--espacamento-medio);
     text-align: center;
+   z-index,1;
 }
 
 
@@ -63,6 +64,7 @@ footer {
 /* MENU HAMBÚRGUER */
 .menu-hamburguer {
   position: relative;
+z-index: 1000;
 }
 
 .menu-icon {
@@ -82,14 +84,22 @@ footer {
   display: block;
   height: 4px;
   width: 100%;
-  background-color: #fff;
+  background-color: #000;
   border-radius: 2px;
   transition: all 0.3s ease;
 }
 
-#menu-toggle {
-  display: none;
+  #menu-toggle {
+    opacity: 0;
+    position: absolute;
+    width: 35px;
+    height: 25px;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    z-index: 1000;
 }
+
 
 /* Animação do X */
 #menu-toggle:checked + .menu-icon span:nth-child(1) {
