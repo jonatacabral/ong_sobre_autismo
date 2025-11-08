@@ -95,7 +95,7 @@ z-index: 1000;
     width: 35px;
     height: 25px;
     top: 0;
-    right: 0;
+    left: 0;
     cursor: pointer;
     z-index: 1000;
 }
@@ -149,7 +149,7 @@ z-index: 1000;
 }
 
 /* Menu desktop */
-@media (min-width: 768px) {
+@media (hover: hover) and (pointer: fine) {
   .menu {
     display: flex !important;
     position: static;
@@ -175,7 +175,7 @@ z-index: 1000;
 }
 
 /* Responsividade */
-@media (min-width: 768px) {
+@media (hover: hover) and (pointer: fine) {
   .menu {
     display: flex !important;
     position: static;
