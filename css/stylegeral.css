@@ -1,0 +1,323 @@
+
+
+:root {
+    --cor-primaria: #007acc;
+    --cor-clara: #ffffff;
+    --cor-neutra: #f2f2f2;
+    --cor-escura: #333333;
+    --espacamento-medio: 1rem;
+}
+
+body {
+    font-family: "Cabin", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+   
+    background-image: url('/imagens/template.jpg'); /* mesma imagem em todas as páginas */
+    color: var(--cor-preto);
+    padding: var(--espacamento-medio);
+    text-align: center;
+}
+
+
+header h1 {
+    font-size: 2rem;
+}
+
+/* Responsividade do header */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+}
+
+
+
+
+
+main {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: var(--espacamento-medio);
+    padding: var(--espacamento-medio);
+}
+
+section {
+    grid-column: span 12;
+    background-color: var(--cor-neutra);
+    padding: var(--espacamento-medio);
+    border: 1px solid var(--cor-escura);
+}
+
+footer {
+    background-color: var(--cor-primaria);
+    color: var(--cor-clara);
+    padding: var(--espacamento-medio);
+    text-align: center;
+    clear: both;
+}
+
+/* Menu Hamburger */
+.menu-hamburguer {
+    position: relative;
+}
+
+.menu-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.menu-icon span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    margin-bottom: 5px;
+    transition: all 0.3s ease;
+}
+
+#menu-toggle:checked + .menu-icon span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+#menu-toggle:checked + .menu-icon span:nth-child(2) {
+    opacity: 0;
+}
+#menu-toggle:checked + .menu-icon span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+.menu {
+    display: none;
+    position: absolute;
+    top: 40px;
+    right: 0;
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+}
+#menu-toggle:checked ~ .menu {
+    display: block;
+}
+
+#menu-toggle {
+    opacity: 0;
+    position: absolute;
+}
+
+/* Menu Hambúrguer */
+.menu-hamburguer {
+  position: relative;
+}
+
+.menu-icon {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 30px;
+  height: 25px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.menu-icon span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background-color: #000;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+/* Animação do X */
+#menu-toggle:checked + .menu-icon span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+#menu-toggle:checked + .menu-icon span:nth-child(2) {
+  opacity: 0;
+}
+#menu-toggle:checked + .menu-icon span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* Menu */
+.menu {
+  display: none;
+  position: absolute;
+  top: 60px;
+  right: 0;
+  background-color: rgba(76, 175, 80, 0.95); /* verde moderno */
+  border-radius: 8px;
+  padding: 1rem;
+  z-index: 10;
+}
+
+.menu ul {
+  list-style: none;
+}
+
+.menu ul li {
+  margin: 0.8rem 0;
+}
+
+.menu ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.menu ul li a:hover {
+  text-decoration: underline;
+}
+
+#menu-toggle:checked ~ .menu {
+  display: block;
+}
+
+/* Responsividade */
+@media (min-width: 768px) {
+  .menu {
+    display: flex !important;
+    position: static;
+    background: none;
+    flex-direction: row;
+    gap: 2rem;
+    padding: 0;
+  }
+
+  .menu-icon {
+    display: none;
+  }
+
+  .menu ul {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+  }
+
+  .menu ul li {
+    margin: 0;
+  }
+}
+
+/* Responsividade */
+@media (max-width: 1200px) {
+    main { grid-template-columns: repeat(10, 1fr); }
+}
+@media (max-width: 992px) {
+    main { grid-template-columns: repeat(8, 1fr); }
+}
+@media (max-width: 768px) {
+    main { grid-template-columns: repeat(6, 1fr); }
+}
+@media (max-width: 480px) {
+    main { grid-template-columns: repeat(4, 1fr); }
+}
+@media (max-width: 320px) {
+    main { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* =============================== */
+/* 🌙 MODO ESCURO E ALTO CONTRASTE */
+/* =============================== */
+
+/* Variáveis padrão (modo claro) */
+:root {
+  --cor-fundo: #ffffff;
+  --cor-texto: #222222;
+  --cor-primaria: #007acc;
+  --cor-secundaria: #4CAF50;
+  --cor-borda: #cccccc;
+  --cor-destaque: #e0f7fa;
+}
+
+/* Estilo base */
+body {
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Links e botões acessíveis */
+a, button {
+  color: var(--cor-secundaria);
+  font-weight: bold;
+}
+a:focus-visible, button:focus-visible {
+  outline: 3px solid var(--cor-primaria);
+  outline-offset: 3px;
+}
+
+/* =============================== */
+/* 🌑 MODO ESCURO AUTOMÁTICO */
+/* =============================== */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --cor-fundo: #121212;
+    --cor-texto: #f2f2f2;
+    --cor-primaria: #64b5f6;
+    --cor-secundaria: #81c784;
+    --cor-borda: #333333;
+    --cor-destaque: #1e1e1e;
+  }
+
+  body {
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+  }
+
+  header, footer, section {
+    background-color: var(--cor-destaque);
+    border-color: var(--cor-borda);
+  }
+
+  a, button {
+    color: var(--cor-secundaria);
+  }
+}
+
+/* =============================== */
+/* ⚡ VERSÃO ALTO CONTRASTE MANUAL */
+/* =============================== */
+
+/* Adicione a classe .alto-contraste ao <body> via JS ou botão */
+body.alto-contraste {
+  --cor-fundo: #000000;
+  --cor-texto: #ffffff;
+  --cor-primaria: #ffff00;
+  --cor-secundaria: #00ffff;
+  --cor-borda: #ffffff;
+}
+
+body.alto-contraste header,
+body.alto-contraste footer,
+body.alto-contraste section {
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto);
+  border: 2px solid var(--cor-borda);
+}
+
+body.alto-contraste a,
+body.alto-contraste button {
+  background-color: var(--cor-primaria);
+  color: #000;
+  border: none;
+}
+
+/* Foco visível em alto contraste */
+body.alto-contraste :focus-visible {
+  outline: 3px dashed var(--cor-secundaria);
+  outline-offset: 4px;
+}
